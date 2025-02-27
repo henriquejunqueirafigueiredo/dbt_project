@@ -22,12 +22,13 @@ models:
       tags: ['staging']
 
     intermediate:
-      materialized: ephemeral
+      schema: intermediate
+      materialized: view
       tags: ['intermediate']
 
     mart:
       schema: marts
-      materialized: table
+      materialized: view
       tags: ['mart']
 
 seeds:
