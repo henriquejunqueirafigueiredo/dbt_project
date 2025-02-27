@@ -1,0 +1,13 @@
+1) Criar uma conta no GCP, redshifit, snowflake etc.
+2) Criar conta no git e um repositorio
+3) Pegar as credenciais de acesso ou arquivo jsnon com as chaves
+4) Puxar o repositorio para sua maquina e abrir no vs code
+5) Usando o terminal faça os seguintes passos no terminal
+    5.1) instale o dbt com pip install dbt-bigquery(nesse momento coloque o seu dw)
+    5.2) inicie o dbt com o comando dbt init
+    5.3) preencha os dados sobre a sua conta de acordo com os pedidos do terminal
+        OBS: Muito importante esse passo, pois se fizer algo errado o dbt não consiguira conectar ao banco
+    5.4) escreva dbt debug - nesse momento o dbt ira acessar suas chaves e fazer a conexão
+        Obs: caso algo der errado va ao arquivo profile.yml criado pelo dbt que provalvelmennte estara no seu c:/user/.dbt/profile yml. Confira se precisa de alguma alteração pelo doc do dbt
+6) nesse momento o dbt já estara funcionando
+7) faça suas branchs e controle de versão da maneira que esta acustumado
