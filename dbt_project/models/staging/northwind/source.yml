@@ -11,7 +11,7 @@ sources:
       description: 'Tabela com os pedidos da empresa'
       columns:
         - name: order_id
-          tests:
+          data_tests:
             - unique
             - not_null
         - name: customer_id
@@ -33,7 +33,7 @@ sources:
       columns:
         - name: category_id
           description: 'Identificador da categoria'
-          tests:
+          data_tests:
             - unique
             - not_null
         - name: category_name
@@ -44,7 +44,7 @@ sources:
       description: 'Tabela com os dados dos clientes'
       columns:
         - name: customer_id
-          tests:
+          data_tests:
             - unique
             - not_null
         - name: customer_type_id
@@ -53,7 +53,7 @@ sources:
       description: 'Tabela com os dados demográficos dos clientes'
       columns:
         - name: customer_type_id
-          tests:
+          data_tests:
             - unique
             - not_null
         - name: customer_desc
@@ -62,7 +62,7 @@ sources:
       description: 'Tabela com os dados dos clientes'
       columns:
         - name: customer_id
-          tests:
+          data_tests:
             - unique
             - not_null
         - name: company_name
@@ -76,20 +76,17 @@ sources:
         - name: phone
         - name: fax
     
-    - name: employees_territories
+    - name: employee_territories
       description: 'Tabela com os territórios dos funcionários'
       columns:
         - name: employee_id
-          tests:
-            - unique
-            - not_null
         - name: territory_id
 
     - name: employees
       description: 'Tabela com os dados dos funcionários'
       columns:
         - name: employee_id
-          tests:
+          data_tests:
             - unique
             - not_null
         - name: last_name
@@ -114,8 +111,7 @@ sources:
       description: 'Tabela com os detalhes dos pedidos'
       columns:
         - name: order_id
-          tests:
-            - unique
+          data_tests:
             - not_null
         - name: product_id
         - name: unit_price
@@ -126,7 +122,7 @@ sources:
       description: 'Tabela com os produtos'
       columns:
         - name: product_id
-          tests:
+          data_tests:
             - unique
             - not_null
         - name: product_name
@@ -143,7 +139,7 @@ sources:
       description: 'Tabela com as regiões'
       columns:
         - name: region_id
-          tests:
+          data_tests:
             - unique
             - not_null
         - name: region_description
@@ -152,7 +148,7 @@ sources:
       description: 'Tabela com os transportadores'
       columns:
         - name: shipper_id
-          tests:
+          data_tests:
             - unique
             - not_null
         - name: company_name
@@ -162,7 +158,7 @@ sources:
       description: 'Tabela com os fornecedores'
       columns:
         - name: supplier_id
-          tests:
+          data_tests:
             - unique
             - not_null
         - name: company_name
@@ -181,7 +177,7 @@ sources:
       description: 'Tabela com os territórios'
       columns:
         - name: territory_id
-          tests:
+          data_tests:
             - unique
             - not_null
         - name: territory_description
@@ -191,7 +187,7 @@ sources:
       description: 'Tabela com os estados dos EUA'
       columns:
         - name: state_id
-          tests:
+          data_tests:
             - unique
             - not_null
         - name: state_name

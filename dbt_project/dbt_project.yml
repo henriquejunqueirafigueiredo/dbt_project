@@ -18,7 +18,7 @@ models:
   dbt_project:
     staging:
       schema: staging
-      materialized: table
+      materialized: view
       tags: ['staging']
 
     intermediate:
@@ -26,9 +26,9 @@ models:
       materialized: view
       tags: ['intermediate']
 
-    mart:
+    marts:
       schema: marts
-      materialized: view
+      materialized: table
       tags: ['mart']
 
 seeds:
